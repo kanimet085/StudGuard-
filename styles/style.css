@@ -1,7 +1,7 @@
+/* ========== HEADER ========== */
+
 /* ========== section__hero ========== */
 
-
-/* Логотип */
 .hero__nav img {
     height: 80px;
     width: 80px;
@@ -10,7 +10,7 @@
     top: 50%;
     transform: translateY(-50%); 
 }
-/* Навигационная панель */
+
 .hero__nav {
     height: 100px;
     max-width: 1600px;
@@ -31,7 +31,6 @@
     font-family: inherit;
 }
 
-/* Контейнер для ссылок и кнопок */
 .hero__nav--up {
     display: flex;
     justify-content: flex-end;
@@ -55,7 +54,6 @@
     text-underline-offset: 4px;
 }
 
-/* Кнопки Язык и Тема - теперь выглядят современно */
 .hero__nav--up-button {
     font-weight: 600;
     font-size: 14px;
@@ -73,7 +71,6 @@
     border-color: #fff;
 }
 
-/* Главный блок Hero */
 .hero__main {
     position: relative;
     max-height: 600px;
@@ -131,7 +128,6 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Задний фон Hero-картинки */
 .hero__main img {
     position: absolute;
     display: inline-block;
@@ -145,7 +141,6 @@
     /* object-fit: cover; */
 }
 
-/* Главная кнопка действия (Найти Бадди) */
 .hero__main-button {
     position: absolute;
     right: 200px;
@@ -168,6 +163,8 @@
     background-color: rgba(0, 0, 0, 0.7);
     transform: scale(1.03); 
 }
+
+/* ========== MAIN ========== */
 
 /* ========== section__about ========== */
 
@@ -486,9 +483,8 @@
     border-radius: 12px;
     border: 1px solid #edf2f7;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    overflow: hidden;
     max-height: 310px; 
-    overflow-y: auto;
+    position: relative; 
 }
 
 .transfer__result table {
@@ -524,6 +520,42 @@
 
 .transfer__result tbody tr:hover {
     background-color: #fcfdfe;
+}
+
+.transfer__row-blur td {
+    filter: blur(4px);
+    opacity: 0.5;
+    user-select: none; 
+    pointer-events: none;
+}
+
+.transfer__lock {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%; 
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+}
+
+.transfer__lock-box {
+    background: #ffffff;
+    border: 2px solid #edf2f7;
+    padding: 14px 22px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(11, 60, 93, 0.08);
+    transform: translateY(15px); 
+}
+
+.transfer__lock-box span {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-brand-blue, #0b3c5d);
 }
 
 /* ========== section-buddy ========== */
@@ -652,4 +684,261 @@
     background-color: var(--color-brand-blue);
     color: var(--bg-card);
     cursor: pointer;
+}
+
+/* ========== section-roadmap ========== */
+
+.roadmap__contant{
+    padding: 60px 0;
+    background-color: #f8fafc;
+}
+
+.roadmap .container .roadmap__contant {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.roadmap__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.roadmap__header h2 {
+    font-size: 32px;
+    color: #1a2b4c; 
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.roadmap__header p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.roadmap__cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+[class^="roadmap__card-"] {
+    flex: 1;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.roadmap__card-1 {
+    border-color: #2563eb;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+}
+
+.roadmap__card-number {
+    width: 36px;
+    height: 40px;
+    background-color: #e2e8f0;
+    color: #475569;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.roadmap__card-1 .roadmap__card-number {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+[class^="roadmap__card-"] h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.roadmap__card-p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+
+/* ========== section-reviews ========== */
+
+.reviews {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.reviews .container .reviews__contant {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.reviews__header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.reviews__header h2 {
+    font-size: 32px;
+    color: #1a2b4c;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.reviews__header p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.reviews__cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+[class^="reviews__card-"] {
+    flex: 1;
+    background-color: #f8fafc;
+    padding: 35px 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.reviews__card-text {
+    font-size: 15px;
+    color: #334155;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.reviews__card-text::before {
+    content: "“";
+    font-size: 40px;
+    color: #cbd5e1;
+    position: absolute;
+    top: -25px;
+    left: -15px;
+    font-family: serif;
+}
+
+.reviews__card-name {
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.reviews__card-role {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* ========== FOOTER ========== */
+
+.footer {
+    background-color: #1a2b4c;
+    padding: 60px 0 20px 0;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.footer .container .footer__contant {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer__info {
+    flex: 2;
+    max-width: 400px;
+}
+
+.footer__title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #94a3b8; 
+}
+
+.footer__links,
+.footer__contacts {
+    flex: 1;
+}
+
+.footer__main h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer__main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__main ul li {
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.footer__links ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color var(--transition-fast, 0.2s);
+}
+
+.footer__links ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer__bottom {
+    border-top: 1px solid #2d3748;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer__bottom p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
 }
