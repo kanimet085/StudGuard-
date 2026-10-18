@@ -75,8 +75,8 @@
                 <div class="transfer__contant">
                     <div class="transfer__paper">
                         <div class="transfer__header">
-                            <h2>Вумный ECTS-калькулятор</h2>
-                            <p>Выберите ВУЗ, и внесите данные транскрипта для преоброзования в систему МУА</p>
+                            <h2>Умный ECTS-калькулятор</h2>
+                            <p>Выберите ВУЗ, и внесите данные транскрипта для преобразования в систему МУА</p>
                         </div>
                         <div class="transfer__university">
                             <select class="university__select" id="university-select">
@@ -86,8 +86,8 @@
                             </select>
                             <select class="faculty__select" id="faculty-select">
                                 <option value="" disabled selected>Выберите факультет...</option>
-                                <option value="КБ">Кибер безопастность</option>
-                                <option value="КИ">Компютерная инженерия</option>
+                                <option value="КБ">Кибербезопасность</option>
+                                <option value="КИ">Компьютерная инженерия</option>
                             </select>
                             <select class="curs__select" id="curs-select">
                                 <option value="" disabled selected>Выберите курс...</option>
@@ -101,19 +101,19 @@
                             <div class="transfer__input">
                                 <label for="transfer__input-1">
                                     <input type="text" id="transfer__input-1" class="transfer__input-1">
-                                    <span>Посешяемость</span>
+                                    <span>Посещаемость (часы)</span>
                                 </label>
                                 <label for="transfer__input-2">
                                     <input type="text" id="transfer__input-2" class="transfer__input-2">
-                                    <span>Кредиты</span>
+                                    <span>Кредиты (ECTS)</span>
                                 </label>
                                 <label for="transfer__input-3">
                                     <input type="text" id="transfer__input-3" class="transfer__input-3">
-                                    <span>пока не придумал</span>
+                                    <span>Название предмета</span>
                                 </label>
                                 <label for="transfer__input-4">
                                     <input type="text" id="transfer__input-4" class="transfer__input-4">
-                                    <span>пока не придумал</span>
+                                    <span>Оценка (Grade)</span>
                                 </label>
                             </div>
                             <div class="transfer__result">
@@ -121,7 +121,7 @@
                                     <thead> 
                                         <tr>
                                             <th>Предметы</th> 
-                                            <th>Посешяемость 30%</th> 
+                                            <th>Посещаемость 30%</th> 
                                             <th>Кредиты</th> 
                                         </tr>
                                     </thead>
@@ -131,28 +131,33 @@
                                             <td>Мат-анализ</td> 
                                             <td>60ч</td> 
                                             <td>0/18</td> 
-                                            <!-- <td>GPI</td>  -->
                                         </tr>
                                         <tr> 
                                             <td>Лин-алгебра</td>
                                             <td>60ч</td>
                                             <td>0/18</td>
-                                            <!-- <td>GPI</td> -->
                                         </tr>
-                                        <tr> 
+                                        <!-- Добавили класс для эффекта размытия скрытых данных -->
+                                        <tr class="transfer__row-blur"> 
                                             <td>Введение в инженерию</td>
                                             <td>60ч</td>
                                             <td>0/18</td>
-                                            <!-- <td>GPI</td> -->
                                         </tr>
-                                        <tr> 
+                                        <tr class="transfer__row-blur"> 
                                             <td>Язык Java</td>
                                             <td>60ч</td>
                                             <td>0/18</td>
-                                            <!-- <td>GPI</td> -->
                                         </tr>
                                     </tbody>
                                 </table> 
+
+                                <!-- Тот самый контролируемый замок внутри твоего блока результата -->
+                                <div class="transfer__lock">
+                                    <div class="transfer__lock-box">
+                                        <span>🔒 Полный расчет академической разницы доступен через твоего Buddy</span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <button>Вычислить разность</button>
@@ -209,21 +214,97 @@
             </div>
         </section>
 
-        <section class="">
+        <section class="roadmap">
             <div class="container">
-                <div class="###__contant">
-
+                <div class="roadmap__contant">
+                    <div class="roadmap__header">
+                        <h2>Твой путь адаптации в МУА</h2>
+                        <p>Пройди эти 4 простых шага вместе со своим Бадди (Buddy), чтобы полностью влиться в студенческую жизнь университета и не потеряться в первые недели обучения.</p>
+                    </div>
+                    <div class="roadmap__main">
+                        <div class="roadmap__cards">
+                            <article class="roadmap__card-1">
+                                <div class="roadmap__card-number">1</div>
+                                <h3>Знакомство и Кампус</h3>
+                                <p class="roadmap__card-p">Buddy встретит тебя в первый день, покажет все блоки кампуса, библиотеку, читальные залы и самую вкусную столовую.</p>
+                            </article>
+                            <article class="roadmap__card-2">
+                                <div class="roadmap__card-number">2</div>
+                                <h3>Цифровая экосистема</h3>
+                                <p class="roadmap__card-p">Разберетесь вместе, как правильно заходить в ИСУ (Moodle), где смотреть актуальное расписание пар, дедлайны и свои оценки.</p>
+                            </article>
+                            <article class="roadmap__card-3">
+                                <div class="roadmap__card-number">3</div>
+                                <h3>Студенческая жизнь</h3>
+                                <p class="roadmap__card-p">Buddy познакомит тебя со студенческим сенатом и топовыми клубами МУА (IT, Дебаты, КВН, Шахматы, Спортивные секции).</p>
+                            </article>
+                            <article class="roadmap__card-4">
+                                <div class="roadmap__card-number">4</div>
+                                <h3>Финал квеста</h3>
+                                <p class="roadmap__card-p">Когда почувствуешь себя уверенно, подтверди в системе успешное завершение адаптации и оставь честный отзыв о своем Бадди.</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="">
+        <section class="reviews">
             <div class="container">
-                <div class="###__contant">
-
+                <div class="reviews__contant">
+                    <div class="reviews__header">
+                        <h2>Истории наших студентов</h2>
+                        <p>Посмотри, как система Buddy уже помогла ребятам найти верных друзей, влиться в учебный процесс МУА и получить крутые бонусы для личного портфолио.</p>
+                    </div>
+                    <div class="reviews__main">
+                        <div class="reviews__cards">
+                            <article class="reviews__card-1">
+                                <p class="reviews__card-text">«Перевелся в МУА посреди семестра из другого вуза, никого вообще не знал. Мой бадди за два дня показал мне весь университет, объяснил фишки профессоров и познакомил со своей группой. Адаптация прошла максимально легко!»</p>
+                                <h3 class="reviews__card-name">Данияр Исмаилов</h3>
+                                <p class="reviews__card-role">Студент 1-курса, COM-24</p>
+                            </article>
+                            <article class="reviews__card-2">
+                                <p class="reviews__card-text">«Быть бадди — это нереальный опыт. Я помогла ребятам-иностранцам привыкнуть к Бишкеку и нашей культуре. Плюс, руководство МУА официально зачитало мне это как социальные часы для обязательной практики. Рекомендую!»</p>
+                                <h3 class="reviews__card-name">Айсулуу Маратова</h3>
+                                <p class="reviews__card-role">Buddy, 3-курс, Управление бизнесом</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contant">
+                <div class="footer__main">
+                    <div class="footer__info">
+                        <h3 class="footer__title">StudGuard</h3>
+                        <p class="footer__desc">Твой надежный проводник и защитник в студенческой жизни МУА. Помогаем адаптироваться, закрывать академические разницы и находить верных друзей.</p>
+                    </div>
+                    <div class="footer__links">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Найти Бадди</a></li>
+                            <li><a href="#">ECTS-Калькулятор</a></li>
+                            <li><a href="#">Истории успеха</a></li>
+                        </ul>
+                    </div>
+                     <div class="footer__contacts">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li>Университет: МУА (Ала-Тоо)</li>
+                            <li>Адрес: г. Бишкек, ул. Горького 1/3</li>
+                            <li>Email: studguard.mua@gmail.com</li>
+                           </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>&copy; 2026 StudGuard Team (МУА Хакатон). Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
