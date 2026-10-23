@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+        <section class="calc">
+            <div class="container">
+                <div class="calc__contant">
+                    <div class="calc__paper">
+                        <form id="calc__form" >
+                            <div class="calc__header">
+                                <h2>Умный ECTS-калькулятор</h2>
+                                <p>Выберите ВУЗ, и внесите данные транскрипта для преобразования в систему МУА</p>
+                            </div>
+                            <div class="calc__university">
+                                <select class="university__select" id="university-select">
+                                    <option value="" disabled selected>Выберите прошлый ВУЗ...</option>
+                                    <option value="KRSU">Славянский</option>
+                                    <option value="KGTU">Политех</option>
+                                </select>
+                                <select class="faculty__select" id="faculty-select">
+                                    <option value="" disabled selected>Выберите факультет...</option>
+                                    <option value="КБ">Кибербезопасность</option>
+                                    <option value="КИ">Компьютерная инженерия</option>
+                                </select>
+                                <select class="curs__select" id="curs-select">
+                                    <option value="" disabled selected>Выберите курс...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="calc__main">
+                                <div class="calc__input">
+                                    <label for="calc__input-1">
+                                        <input type="text" id="attendance" class="calc__input-1" required>
+                                        <span>Посещаемость (часы)</span>
+                                    </label>
+                                    <label for="calc__input-2">
+                                        <input type="text" id="credits" class="calc__input-2" required>
+                                        <span>Кредиты (ECTS)</span>
+                                    </label>
+                                    <label for="calc__input-3">
+                                        <input type="text" id="subject" class="calc__input-3" required>
+                                        <span>Название предмета</span>
+                                    </label>
+                                    <label for="calc__input-4">
+                                        <input type="text" id="grade" class="calc__input-4" required>
+                                        <span>Оценка (Grade)</span>
+                                    </label>
+                                </div>
+                                <div class="calc__result">
+                                    <table> 
+                                        <thead> 
+                                            <tr>
+                                                <th>Предметы</th> 
+                                                <th>Посещаемость 30%</th> 
+                                                <th>Кредиты</th> 
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="calculation"> 
+                                            
+                                        </tbody>
+                                    </table> 
+
+                                    <div class="calc__lock">
+                                         <div class="calc__lock-box">
+                                            <span>🔒 Полный расчет академической разницы доступен через твоего Buddy</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <input type="submit" id="calc__button" value="Вычислить разность">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="./scripts/calc.js"></script>
+</body>
+</html>
