@@ -310,7 +310,6 @@
 
 /* ========== section-buddy ========== */
 
-
 .buddy__contant {
     display: flex;
     flex-direction: column;
@@ -342,6 +341,33 @@
     opacity: 0.7; 
 }
 
+/* СТИЛИ ФИЛЬТРОВ (Новое!) */
+.buddy__filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.buddy__filter-btn {
+    background-color: var(--bg-card);
+    color: var(--color-brand-blue);
+    border: 2px solid var(--color-brand-blue);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.buddy__filter-btn:hover,
+.buddy__filter-btn.active {
+    background-color: var(--color-brand-blue);
+    color: var(--bg-card);
+}
+
 .buddy__main {
     width: 100%;
 }
@@ -352,9 +378,8 @@
     gap: 30px; 
 }
 
-.buddy__card-1,
-.buddy__card-2,
-.buddy__card-3 {
+/* Унифицированный класс карточки вместо 1, 2, 3 */
+.buddy__card-item {
     background-color: var(--bg-card); 
     border-radius: var(--border-radius); 
     padding: 30px 24px; 
@@ -366,12 +391,10 @@
     text-align: center;
     box-shadow: var(--shadow-sm); 
     border-top: 5px solid var(--color-brand-blue); 
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-top-color var(--transition-fast);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-top-color var(--transition-fast), display var(--transition-fast);
 }
 
-.buddy__card-1:hover,
-.buddy__card-2:hover,
-.buddy__card-3:hover {
+.buddy__card-item:hover {
     transform: translateY(-8px); 
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
     border-top-color: var(--color-brand-gold);

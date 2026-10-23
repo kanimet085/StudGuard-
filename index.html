@@ -14,7 +14,7 @@
                     <nav class="hero__nav">
                         <div class="hero__nav--up">
                             <a href="#" class="hero__nav--up-a">О нас</a>
-                            <a href="./calc.html" class="hero__nav--up-a" target="_blank">Калькулятор</a>
+                            <a href="./transfer.html" class="hero__nav--up-a" target="_blank">Калькулятор</a>
                             <a href="#" class="hero__nav--up-a">Ментора</a>
                             <a href="#" class="hero__nav--up-a">+996706226730</a>
                             <a href="#" class="hero__nav--up-a">@Kani_085</a>  
@@ -76,12 +76,12 @@
                     <div class="calc__paper">
                         <div class="calc__header">
                             <h2>Умный ECTS-калькулятор</h2>
-                            <p>Выберите ВУЗ, и внесите данные транскрипта для преобразования в систему МУА</p>
-                            <a href="./calc.html">нажми на меня!</a>
+                            <p>Выберите ВУЗ и внесите данные транскрипта для преобразования в систему МУА</p>
+                            <a href="./transfer.html" class="calc__cta-btn">Открыть калькулятор</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>    
         </section>
 
         <section class="buddy">
@@ -90,13 +90,24 @@
                     <div class="buddy__header">
                         <h2>Найди своего Бадди (Buddy)</h2>
                         <p>Это твой личный проводник в студенческую жизнь МУА. Старшекурсники помогут тебе быстро адаптироваться на кампусе, закрыть академические вопросы и избежать типичных ошибок новичков. Учеба проще, когда рядом есть надежное плечо!</p>
+                        
+                        <!-- НОВЫЙ БЛОК: Кнопки фильтрации (Зона роста №2 от жюри) -->
+                        <div class="buddy__filters">
+                            <button class="buddy__filter-btn active" data-filter="all">Все направления</button>
+                            <button class="buddy__filter-btn" data-filter="engineering">Инженерия (COMSE)</button>
+                            <button class="buddy__filter-btn" data-filter="business">Бизнес / Экономика</button>
+                            <button class="buddy__filter-btn" data-filter="ir">МО / Политология</button>
+                        </div>
                     </div>
+
                     <div class="buddy__main">
                         <div class="buddy__cards">
-                            <article class="buddy__card-1">
-                                <img src="./assets/media/images/buddy__card-human.jpg" alt="Buuddy">
+                            
+                            <!-- Карточка 1: Инженерия (твоя) -->
+                            <article class="buddy__card-item" data-faculty="engineering">
+                                <img src="./assets/media/images/buddy__card-human.jpg" alt="Buddy">
                                 <h3>Алмазбеков Канимет</h3>
-                                <p class="buddy__card-faculty">COMSE-26(Компьютерная инженерия)</p>
+                                <p class="buddy__card-faculty">COMSE-26 (Компьютерная инженерия)</p>
                                 <p class="buddy__card-p">«Поделюсь лайфхаками: где в МУА самый вкусный кофе и как закрыть сессию автоматом»</p>
                                 <ul>
                                     <li>#Программирование</li>
@@ -104,33 +115,39 @@
                                     <li>#Адаптация</li>
                                 </ul>
                             </article>
-                            <article class="buddy__card-2">
-                                <img src="./assets/media/images/buddy__card-human.jpg" alt="Buuddy">
-                                <h3>Алмазбеков Канимет</h3>
-                                <p class="buddy__card-faculty">COMSE-26(Компьютерная инженерия)</p>
-                                <p class="buddy__card-p">«Поделюсь лайфхаками: где в МУА самый вкусный кофе и как закрыть сессию автоматом»</p>
+
+                            <!-- Карточка 2: Бизнес (новый профиль для разнообразия базы) -->
+                            <article class="buddy__card-item" data-faculty="business">
+                                <img src="./assets/media/images/buddy__card-human.jpg" alt="Buddy">
+                                <h3>Исмаилов Данияр</h3>
+                                <p class="buddy__card-faculty">Business-25 (Маркетинг и Менеджмент)</p>
+                                <p class="buddy__card-p">«Помогу разобраться со статистикой и объясню, как устроен студенческий совет кампуса МУА»</p>
                                 <ul>
-                                    <li>#Программирование</li>
-                                    <li>#ECTS_Калькулятор</li>
-                                    <li>#Адаптация</li>
+                                    <li>#Маркетинг</li>
+                                    <li>#Менеджмент</li>
+                                    <li>#СтудСовет</li>
                                 </ul>
                             </article>
-                            <article class="buddy__card-3">
-                                <img src="./assets/media/images/buddy__card-human.jpg" alt="Buuddy">
-                                <h3>Алмазбеков Канимет</h3>
-                                <p class="buddy__card-faculty">COMSE-26(Компьютерная инженерия)</p>
-                                <p class="buddy__card-p">«Поделюсь лайфхаками: где в МУА самый вкусный кофе и как закрыть сессию автоматом»</p>
+
+                            <!-- Карточка 3: Международные отношения (новый профиль) -->
+                            <article class="buddy__card-item" data-faculty="ir">
+                                <img src="./assets/media/images/buddy__card-human.jpg" alt="Buddy">
+                                <h3>Асанова Алина</h3>
+                                <p class="buddy__card-faculty">IR-24 (Международные отношения)</p>
+                                <p class="buddy__card-p">«Подтяну твой Academic English перед тестом МУА и расскажу про зарубежные программы обмена»</p>
                                 <ul>
-                                    <li>#Программирование</li>
-                                    <li>#ECTS_Калькулятор</li>
-                                    <li>#Адаптация</li>
+                                    <li>#English_Test</li>
+                                    <li>#Дипломатия</li>
+                                    <li>#Обмен_ВУЗов</li>
                                 </ul>
                             </article>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <section class="roadmap">
             <div class="container">

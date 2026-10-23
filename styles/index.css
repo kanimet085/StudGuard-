@@ -4,3 +4,60 @@
 @import "./global.css";
 @import "./style.css";
 @import "./calc.css";
+
+
+.calc__contant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calc__paper {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    max-width: 600px;
+    width: 100%;
+    text-align: center; 
+}
+
+.calc__header h2 {
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.calc__header p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+.calc__cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #3b82f6; 
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.calc__cta-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+.calc__cta-btn:active {
+    transform: translateY(0);
+}
